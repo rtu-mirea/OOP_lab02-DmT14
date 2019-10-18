@@ -11,7 +11,7 @@ public class Main {
         printMenu();
         int n = 1;
 
-        while (n >= 1 && n < 4) {
+        while (true) {
             n = in.nextInt();
             switch (n) {
                 case 1:
@@ -52,6 +52,9 @@ public class Main {
                     break;
                 case 4:
                     System.exit(0);
+                    break;
+                default:
+                    System.out.println("Вы выбрали неверный пункт, повторите ввод.");
                     break;
             }
         }
