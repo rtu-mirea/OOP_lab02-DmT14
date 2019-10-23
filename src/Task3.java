@@ -19,7 +19,7 @@ public class Task3 {
     }
 
     public void replaceSymbol() {
-        //44Привет, как7дела 6?55 666
+        //Привет, как7дела 6?55 666
         System.out.print("Введите строку: ");
         String str = in.nextLine();
 
