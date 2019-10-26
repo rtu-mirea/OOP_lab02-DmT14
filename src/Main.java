@@ -16,13 +16,10 @@ public class Main {
             switch (n) {
                 case 1:
                     in = new Scanner(System.in);
-                    System.out.println("Введите 2 предложения, после каждого нажмите Enter: ");
 
-                    String text1 = in.nextLine();
-                    String text2 = in.nextLine();
+                    task1 = new Task1();
 
-                    task1 = new Task1(text1, text2);
-
+                    task1.inputStrings();
                     System.out.println("Число жирных начертаний 1-го предложения: " + '\t' + task1.searchingBold());
                     System.out.println("Измененный шрифт 2-го предложения: " + '\t' + task1.replace());
                     System.out.println("Новое сформированное предложение: " + '\t' + task1.newStr());
@@ -54,7 +51,7 @@ public class Main {
                     System.exit(0);
                     break;
                 default:
-                    System.out.println("Вы выбрали неверный пункт, повторите ввод.");
+                    System.out.print("Вы выбрали неверный пункт, повторите ввод: ");
                     break;
             }
         }

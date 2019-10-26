@@ -6,9 +6,22 @@ public class Task1 {
     private String newString;
     private int counter = 0;
 
-    public Task1(String txt1, String txt2) {
-        this.txt1 = txt1;
-        this.txt2 = txt2;
+    public Task1() {}
+
+    public void inputStrings() {
+        System.out.print("Введите количество абзацев: ");
+        Scanner in = new Scanner(System.in);
+        int n = in.nextInt();
+        in.nextLine();
+
+        System.out.println("Введите " + n + " предложений(е, я), после каждого нажмите Enter: ");
+        String[] str = new String[n];
+        for(int i = 0; i < str.length; i++) {
+            str[i] = in.nextLine();
+        }
+
+        txt1 = str[0];
+        txt2 = str[1];
     }
 
     public int searchingBold() {

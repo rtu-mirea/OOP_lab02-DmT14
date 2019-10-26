@@ -13,8 +13,7 @@ public class Task3 {
 
         if(str.matches("^(\\d)\\1$"))
             System.out.println("Строка состоит из двух одинаковых цифр.");
-        else
-            System.out.println("Строка не состоит из двух одинаковых цифр.");
+        else System.out.println("Строка не состоит из двух одинаковых цифр.");
     }
 
     public void replaceSymbol() {

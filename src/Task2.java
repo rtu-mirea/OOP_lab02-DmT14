@@ -9,28 +9,53 @@ public class Task2 {
     }
 
     public void fillIn() {
-        System.out.print("Введите фамилию и зарплату сотрудника (пример: Иванов, 10000.): ");
+        System.out.print("Введите номер, фамилию и зарплату сотрудника (пример: 04, Иванов, 10000): ");
+        StringBuffer sb = new StringBuffer(list);
         String newE = in.nextLine();
 
-        int maxIndex = 0;
-        String a = "";
+        String x = "";
+        String strNum = "";
+        int intNum = 0;
+        int a = 0;
+        int b = 0;
 
-        for(int i = 0; i < list.length() - 1; i++)
-            if(list.charAt(i) == '.' && i > maxIndex)
-                maxIndex = i;
+        x += list.charAt(0);
+        x += list.charAt(1);
+        a = Integer.parseInt(x);
 
-        a += list.charAt(maxIndex+2);
-        a += list.charAt(maxIndex+3);
-        int b = Integer.parseInt(a) + 1;
+        outer: while(true) {
+            strNum = "";
+            strNum += newE.charAt(0);
+            strNum += newE.charAt(1);
+            intNum = Integer.parseInt(strNum);
 
-        if(b < 10)
-            list += " 0";
-        else
-            list += ' ';
-        list += String.valueOf(b);
-        list += ", ";
-        list += newE;
+            for (int i = 0; i < list.length() - 1; i++) {
+                if (list.charAt(i) == '.') {
+                    x = "";
+                    x += list.charAt(i + 2);
+                    x += list.charAt(i + 3);
+                    b = Integer.parseInt(x);
+                }
 
+                if (i == list.length() - 2 && a < intNum) {
+                    sb.insert(i, ". " + newE);
+                    break outer;
+                }
+
+                if (a < intNum && b > intNum) {
+                    sb.insert(i, ". " + newE);
+                    break outer;
+                }
+                else if (a == intNum || b == intNum) {
+                    System.out.print("Введенный номер уже занят, повторите ввод: ");
+                    newE = in.nextLine();
+                    break;
+                }
+                else a = b;
+            }
+        }
+
+        list = String.valueOf(sb);
         System.out.println("Список после добавления: " + list);
     }
 
