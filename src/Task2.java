@@ -9,7 +9,7 @@ public class Task2 {
     }
 
     public void fillIn() {
-        System.out.print("Введите номер, фамилию и зарплату сотрудника (пример: 04, Иванов, 10000): ");
+        System.out.print("Введите номер, фамилию и зарплату сотрудника для добавления (пример: 04, Иванов, 10000): ");
         StringBuffer sb = new StringBuffer(list);
         String newE = in.nextLine();
 
