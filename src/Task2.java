@@ -48,7 +48,7 @@ public class Task2 {
             }
         }
 
-        System.out.println("Новая строка: " + sb);
+        System.out.println("Список после удаления: " + sb);
         list = String.valueOf(sb);
     }
 
@@ -61,7 +61,7 @@ public class Task2 {
             if(sb.charAt(i) == '.')
                 sb.insert(i+2, "000");
 
-        System.out.println("Новая строка: " + sb);
+        System.out.println("Список с тремя нолями в номере: " + sb);
         list = String.valueOf(sb);
     }
 }

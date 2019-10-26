@@ -5,7 +5,6 @@ import java.util.regex.Matcher;
 public class Task3 {
     Scanner in = new Scanner(System.in);
     private static String REGEX;
-    private static String INPUT;
     private static String REPLACE;
 
     public void regular() {
@@ -30,7 +29,7 @@ public class Task3 {
 
         Matcher m = p.matcher(str);
         str = m.replaceAll(REPLACE);
-        System.out.print("Результат замены: " + str);
+        System.out.print("Результат замены: " + str + "\n");
     }
 }
 

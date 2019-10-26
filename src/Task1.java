@@ -4,7 +4,6 @@ public class Task1 {
     private String txt1;
     private String txt2;
     private String newString;
-    private String helpStr;
     private int counter = 0;
 
     public Task1(String txt1, String txt2) {
@@ -33,7 +32,7 @@ public class Task1 {
     }
 
     public String newStr() {
-        newString = "(С)(12)Н(П)(12)а улице хорошая погода!";
+        newString = "(С)(12)Н(О)(12)а улице хорошая погода!";
 
         return newString;
     }
